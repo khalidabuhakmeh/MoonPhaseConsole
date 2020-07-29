@@ -4,7 +4,7 @@ This console application has a `Moon` static class that allows users to calculat
 
 ## How Calculations Happen?
 
-We use the last known **New Moon** to calculate the next full moon. The moon phases in a cycle of **29.3** days and there are
+We use the last known **New Moon** to calculate the next full moon. The moon phases in a cycle of **29.53** days and there are
 milestones along the way.
 
 ```c#
@@ -73,11 +73,11 @@ var results =
 With an output of:
 
 ```text
-🌗 First Quarter (6.98 days)
-🌖 Waxing Gibbous (7.98 days)
-🌕 Full Moon (13.98 days)
-🌓 Third Quarter (21.98 days)
-🌑 New Moon (0.45 days)
+🌗 First Quarter (6.98 days, Visibility 47.27%)
+🌖 Waxing Gibbous (7.98 days, Visibility 54.05%)
+🌕 Full Moon (13.98 days, Visibility 94.68%)
+🌓 Third Quarter (21.98 days, Visibility 51.13%)
+🌑 New Moon (0.45 days, Visibility 3.05%)
 ```
 
 ## Classes
