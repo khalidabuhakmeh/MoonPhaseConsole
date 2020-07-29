@@ -22,7 +22,6 @@ namespace MoonPhaseConsole
             Console.WriteLine();
             Console.WriteLine(results);
             
-            
             var result = Moon.Now();
             Console.WriteLine(result);
         }
