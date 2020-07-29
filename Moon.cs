@@ -114,21 +114,26 @@ namespace MoonPhaseConsole
             public double DaysIntoCycle { get; set; }
             public Earth.Hemispheres Hemisphere { get; set; }
             public DateTime Moment { get; }
-
-            public override string ToString()
+            public double Visibility  
             {
-                const int FullMoon = 15;
-                const double halfCycle = TotalLengthOfCycle / 2;
+                get
+                {
+                    const int FullMoon = 15;
+                    const double halfCycle = TotalLengthOfCycle / 2;
                 
-                var numerator = DaysIntoCycle > FullMoon
+                    var numerator = DaysIntoCycle > FullMoon
                         // past the full moon, we want to count down
                         ? halfCycle - (DaysIntoCycle % halfCycle)
                         // leading up to the full moon
                         : DaysIntoCycle;
 
-                var value = numerator / halfCycle * 100;
+                    return numerator / halfCycle * 100;
+                }
+            }
 
-                var percent = Math.Round(value , 2);
+            public override string ToString()
+            {
+                var percent = Math.Round(Visibility , 2);
                 return $"The Moon for {Moment} is {DaysIntoCycle} days\n" +
                        $"into the cycle, and is showing as \"{Name}\"\n" +
                        $"with {percent}% visibility, and a face of {Emoji} from the {Hemisphere.ToString().ToLowerInvariant()} hemisphere.";

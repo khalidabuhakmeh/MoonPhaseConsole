@@ -16,7 +16,7 @@ namespace MoonPhaseConsole
             var results =
                 dates
                     .Select(x => Moon.Calculate(x))
-                    .Select((r, i) => $"{r.Emoji} {r.Name} ({r.DaysIntoCycle} days)\n")
+                    .Select((r, i) => $"{r.Emoji} {r.Name} ({r.DaysIntoCycle} days, Visibility {Math.Round(r.Visibility, 2)}%)\n")
                     .Aggregate((a, v) => a + v);
             
             Console.WriteLine();
