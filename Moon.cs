@@ -100,25 +100,25 @@ namespace MoonPhaseConsole
         public class PhaseResult
         {
             public PhaseResult(string name, string emoji, double daysIntoCycle, Earth.Hemispheres hemisphere,
-                DateTime date)
+                DateTime moment)
             {
                 Name = name;
                 Emoji = emoji;
                 DaysIntoCycle = daysIntoCycle;
                 Hemisphere = hemisphere;
-                Date = date;
+                Moment = moment;
             }
 
             public string Name { get; }
             public string Emoji { get; set; }
             public double DaysIntoCycle { get; set; }
             public Earth.Hemispheres Hemisphere { get; set; }
-            public DateTime Date { get; }
+            public DateTime Moment { get; }
 
             public override string ToString()
             {
                 var percent = Math.Round(100 - ((DaysIntoCycle / TotalLengthOfCycle) * 100), 2);
-                return $"The Moon for {Date} is {DaysIntoCycle} days\n" +
+                return $"The Moon for {Moment} is {DaysIntoCycle} days\n" +
                        $"into the cycle, and is showing as \"{Name}\"\n" +
                        $"with {percent}% visibility, and a face of {Emoji} from the {Hemisphere.ToString().ToLowerInvariant()} hemisphere.";
             }
