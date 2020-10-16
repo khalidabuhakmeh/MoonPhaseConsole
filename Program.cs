@@ -8,9 +8,9 @@ namespace MoonPhaseConsole
         static void Main(string[] args)
         {
             var dates = new[] {
-                new DateTime(2020, 7, 27), new DateTime(2020, 7, 28),
-                new DateTime(2020, 8, 3), new DateTime(2020, 8, 11),
-                new DateTime(2020, 8, 19),
+                 new DateTime(2020, 7, 27), new DateTime(2020, 7, 28),
+                 new DateTime(2020, 8, 3), new DateTime(2020, 8, 11),
+                 new DateTime(2020, 8, 19), new DateTime(2014,1,1) 
             };
 
             var results =
