@@ -6,11 +6,11 @@ namespace MoonPhaseConsole
 {
     public static class Moon
     {
-        private static readonly IReadOnlyList<string> SouthernHemisphere
+        private static readonly IReadOnlyList<string> NorthernHemisphere
             = new List<string> {"🌑", "🌒", "🌓", "🌔", "🌕", "🌖", "🌗", "🌘", "🌑"};
 
-        private static readonly IReadOnlyList<string> NorthernHemisphere
-            = SouthernHemisphere.Reverse().ToList();
+        private static readonly IReadOnlyList<string> SouthernHemisphere
+            = NorthernHemisphere.Reverse().ToList();
 
         private static readonly List<string> Names = new List<string>
         {
